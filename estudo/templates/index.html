@@ -93,7 +93,7 @@
 <body>
 
 <div class="container">
-    <h1>Dashboard Financeiro</h1>
+    <h1>Bem vindo {{usuario}} ao Dashboard Financeiro</h1>
     <p>Resumo geral de desempenho</p>
 
     <div class="card">
@@ -111,7 +111,10 @@
         <span>R$ 143,00</span>
     </div>
 
-    <button>Atualizar Dados</button>
+    <a href="{{ url_for('dados') }}">
+        <button>Atualizar Dados</button>
+    </a>
+
 
     <footer>
         Flask Dashboard • Projeto de Estágio

@@ -1,6 +1,11 @@
 from estudo import app
-from flask import render_template
+from flask import render_template, url_for
 
 @app.route('/')
 def homePage():
-    return render_template('index.html')
+    usuario = "Neto"
+    return render_template('index.html', usuario=usuario)
+
+@app.route("/dados")
+def dados():
+    return "Dados do servidor"
